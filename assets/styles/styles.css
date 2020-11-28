@@ -1,0 +1,524 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+/*************************** Mobile first queries *************************/
+
+/*//////////////// GENERAL //////////////////*/
+html, body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 800;
+	font-size: x-small;
+	background-color: #041E2B;
+}
+
+.page {
+	width: 100vw;
+	height: 100vh;
+	color: #fff;
+	background-size: cover;
+	background-position: center;
+	position: fixed;
+}
+
+.bkBlue {
+	background-color:rgba(3, 23, 38, 0.9);
+}
+
+.sliderText {
+	background-color: #041E2B;
+	border-radius: 25px;
+	height: 50px;
+	width: auto;
+	position: absolute;
+	bottom: 3%;
+	left: 3%;
+	transition: .7s ease;
+}
+.sliderText p {
+	margin: 0 20px 0 70px;
+	font-weight: bold;
+	margin-top: 8px;
+	color: #fff;
+}
+/*////////////////// general-end ///////////////////*/
+
+/*/////////////// FORM ////////////////*/
+.inputStyle {
+	background: none;
+	border-radius: 10px;
+	border: 1px solid #E3E3E3;
+	color: #fff;
+}
+.inputStyle:active {
+	border: 1px solid red;
+}
+/*///////////// form-end //////////////*/
+
+/*//////////////// AJUSTEMENT /////////////*/
+.verticalCenter {
+	margin: 0;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.paddingTop {
+	padding-top: 20px;
+}
+.marginLeft {
+	width: 80%;
+}
+
+.h1UnderLine {
+	text-decoration-color: red;
+	font-weight: 500;
+	font-size: .6em;
+	text-transform: uppercase;
+}
+
+#skillsRow .columns, #homePage .columns, #contactPage .columns {
+    padding: 60px 30px 0px 30px;
+}
+/*///////////// ajustement-end /////////////*/
+
+/*///////////// BACKGROUND-IMAGE ////////////////*/
+#homePage { background-image: url(../img/profil.jpg); }
+
+#skillsPage { background-image: url(../img/auditt.jpg); }
+
+#workOnePage { background-image: url(../img/motocross.jpg); }
+
+#workTwoPage { background-image: url(../img/aircraft.jpg); }
+
+#workThreePage { background-image: url(../img/technology.jpg); }
+
+#workFourPage { background-image: url(../img/videoGame.jpg); }
+
+#contactPage { background-image: url(../img/fishing.jpg); }
+/*///////////// background-image-end ////////////////*/
+
+#infoHover {
+	display: none;
+}
+
+#skillsRow .columns p, #homePage .columns p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*//////////////////// BUTTON ///////////////////////*/
+.arrow {
+	position: absolute;
+	bottom: 15px;
+	width: 30px;
+}
+
+.arrowBottom {
+	right: 30px;
+	transform: rotate(90deg);
+}
+
+.arrowUp {
+	left: 30px;
+	transform: rotate(270deg);
+}
+
+.arrowLeft {
+	left: 30px;
+	transform: rotate(180deg);
+}
+
+.arrowRight {
+	right: 30px;
+}
+
+#infoButton {
+	position: absolute;
+	bottom: 3%;
+	left: 3%;
+	display: none;
+}
+
+#socialIcon {
+	position: absolute;
+	padding: 0;
+	margin: 15px 0 0 30px;
+	z-index: 999;
+}
+
+#socialMedia li {
+	display: inline;
+}
+
+#socialMedia li a {
+	padding: 0;
+	margin-right: 30px;
+}
+
+#socialMedia li a img {
+	height: 2rem;
+}
+/*//////////////////// button-end ///////////////////////*/
+
+/*///////////////// WORKS-PAGES /////////////////////*/
+#imgHover {
+    display: flex;
+	justify-content: center;
+}
+
+.imgWork {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+	margin-top: 50%;
+}
+
+.workTextMobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.workTextMobile p {
+    width: 80%;
+	margin-top: 10%;
+	font-size: 1.5em;
+	line-height: 1.7em;
+}
+/*///////////////// works-pages-end /////////////////////*/
+
+/*PAGE CONTACT*/
+#contactPage {
+	display: flex;
+	justify-content: center;
+}
+#contactPage .bkBlue {
+	display: flex;
+	justify-content: center;
+	padding: 50px 10% 0 10%;
+}
+#contactPage .form {
+
+	max-width: 900px;
+	text-align: center;
+	/*position: relative;*/
+	/*top: 45%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);*/
+}
+
+#contactPage {
+	display: flex;
+	justify-content: center;
+}
+
+#contactPage .bkBlue {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+.descContact .columns{
+	padding-bottom: 20px;
+}
+
+#contactPage .form h1 {
+	text-align: center;
+}
+
+#contactPage label {
+	font-size: 1.5em;
+}
+
+#mailTo {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 800;
+}
+
+#mailTo:hover {
+	color: red;
+}
+/*PAGE CONTACT FIN*/
+
+/******************************* Larger than desktop *****************************/
+@media (min-width: 1000px) {
+	html, body {
+		font-size: large;
+	}
+	#homePage .columns p {
+		text-align: left;
+	}
+	#infoHover {
+		cursor: pointer;
+		display: block;
+		right: 10%;
+        bottom: 3%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		width: 100px;
+	}
+    #imgHover {
+        width: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    .imgWork {
+        display: block;
+        width: 80%;
+        height: auto;
+        border-radius: 15px;
+        margin-top: 0;
+    }
+    .content {
+        position: absolute;
+        top: 50%;
+		left: 50%;
+		width: 90%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 20px;
+    }
+    h2 {
+		font-size: 2.5em;
+	}
+    .overlay {
+        position: absolute;
+        text-align: center;
+        height: 100%;
+        width: 80%;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+    }
+    #infoButton {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+		position: absolute;
+		cursor: pointer;
+		display: block;
+		width: 50px;
+    }
+    #info {cursor: pointer;}
+    .arrowBack, .arrowLeft,  .arrowUp {
+		display: none;
+	}
+    .workTextMobile {
+        display: none;
+    }
+    #homePage .row {
+        width: 55%;
+    }
+    #skillsRow .columns:last-child {
+		padding-top: 10%;
+		padding-right: 100px;
+	}
+	#divCircle {
+		text-align: center;
+	}
+}
+
+/***************************** Larger than Desktop HD ****************************/
+@media (min-width: 1200px) {
+	#logo {
+        padding: 10px 0 0 0;
+    }
+    .row {
+        margin-left: 15px;
+	}
+	#circle {
+		max-width: 700px;
+	}
+}
+
+/********************************************************************/
+/*-----------------------------MENU FULLPAGE------------------------*/
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+i {
+	font-size: 3rem;
+	color: white;
+}
+
+.link a {
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 3rem;
+	color: white;
+	transition-duration: 0.3s;
+	opacity: 0.8;
+	padding: 2rem;
+	letter-spacing: 0.4rem;
+}
+
+.link a:hover {
+	opacity: 1;
+	color: #E91E63;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+	line-height: 5rem;
+	text-align: center;
+}
+
+nav {
+	background: #041E2B;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition-duration: 0.3s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transform-origin: top right;
+	z-index: 998;
+}
+
+.menu-close {
+	transform: scale(0.01);
+	opacity: 0;
+}
+#copyright {
+	position: fixed;
+	bottom: 5px;
+	color: #fff;
+	font-weight: 500;
+}
+
+.toggle {
+	position: fixed;
+	top: 15px;
+	right: 30px;
+	/*margin: 15px 0 0 30px;*/
+	cursor: pointer;
+	z-index: 999;
+}
+
+
+/********************************************************************/
+/*----------------------------TRANSITION----------------------------*/
+
+/* TRANSITION */
+
+.fadeI-enter-active {
+    -webkit-animation: fade;
+	animation: fade;
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeI {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeI {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/*.fade-leave-active {
+    -webkit-animation: fade;
+	animation: fade;
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}*/
+
+
+/*********************************************************/
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+
+/* FADE */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/********************************************************************/
+/*--------------------------TRANSITION-END--------------------------*/
